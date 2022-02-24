@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,22 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin="">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1" crossorigin=""></script>
-    <div id="map"></div>
+    <div id="layout" style="height: 100%;display: flex;/*! padding: 20px; *//*! margin: 20px; */">
+        <div id="map"></div>
+        <div id="menu" style="min-width: 70px;flex: 1 auto;width: auto;flex-grow: 1;flex-grow: 0">
+            <button alt="map &#x 1f5fa;"><img draggable="false" class="emoji" alt="🗺️" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f5fa.png"></button>
+            <button disabled alt="map &#x 1f5d3;"><img draggable="false" class="emoji" alt="🗓️" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f5d3.png"></button>
+            <!-- <button>&#x2699;</button> -->
+            <button disabled alt="map &# x2699;"><img draggable="false" class="emoji" alt="⚙" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2699.png"></button>
+        </div>
+    </div>
     <script>
         const posCenter = [48.86, 33.26]
         const pos = {
-            Charkow: [49.9886000,36.3386000],
+            Charkow: [49.9886000, 36.3386000],
         }
 
         var map = L.map('map').setView(posCenter, 13);
@@ -28,4 +38,5 @@
             .openPopup();
     </script>
 </body>
+
 </html>
