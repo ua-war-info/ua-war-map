@@ -13,15 +13,27 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1" crossorigin=""></script>
     <div id="layout" style="height: 100%;display: flex;/*! padding: 20px; *//*! margin: 20px; */">
-        <div id="map"></div>
-        <div id="menu" style="min-width: 70px;flex: 1 auto;width: auto;flex-grow: 1;flex-grow: 0">
-            <button alt="map &#x 1f5fa;"><img draggable="false" class="emoji" alt="🗺️" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f5fa.png"></button>
-            <button disabled alt="map &#x 1f5d3;"><img draggable="false" class="emoji" alt="🗓️" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f5d3.png"></button>
+        <div class="container" id="map"></div>
+        <div class="container" id="calendar" style="display: none"></div>
+        <div class="container" id="settings" style="display: none"></div>
+        <div class="container" id="menu" style="min-width: 70px;flex: 1 auto;width: auto;flex-grow: 1;flex-grow: 0">
+            <button alt="map &#x 1f5fa;">
+                <img draggable="false" class="emoji" alt="🗺️" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f5fa.png">
+                map
+            </button>
+            <button disabled alt="&#x 1f5d3;">
+                <img draggable="false" class="emoji" alt="🗓️" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/1f5d3.png">
+                calendar
+            </button>
             <!-- <button>&#x2699;</button> -->
-            <button disabled alt="map &# x2699;"><img draggable="false" class="emoji" alt="⚙" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2699.png"></button>
+            <button disabled alt="map &# x2699;">
+                <img draggable="false" class="emoji" alt="⚙" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2699.png">
+                settings
+            </button>
         </div>
     </div>
     <script>
+
         const posCenter = [48.86, 33.26]
         const pos = {
             Charkow: [49.9886000, 36.3386000],
